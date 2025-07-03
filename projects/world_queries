@@ -1,0 +1,22 @@
+USE world;
+SHOW TABLES;
+
+-- SELECT queries:
+
+-- This query will show the structure of the 'country' table
+SELECT * FROM country;
+
+-- This query will return the names and populations of all countries in the world
+SELECT name, population FROM country;
+
+-- This query will return the names and populations of countries with a population greater than 100,000,000
+SELECT name, population FROM country
+WHERE population > 100000000;
+
+-- This query will return the names and populations of countries in Asia with a population greater than 100,000,000
+SELECT name, population FROM country
+WHERE population > 100000000 AND continent = 'Asia';
+
+-- Sorting results
+SELECT name, population FROM country
+ORDER BY population DESC;
